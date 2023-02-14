@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+            integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer" />
+        <title>Document</title>
+        <style>
+            body {
+                font-size: 24px;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            .nav {
+                margin: 48px;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
+            .line {
+                height: 1px;
+                width: 25px;
+                border-radius: 16px;
+                background-color: black;
+                transition: all 0.5s linear;
+                position: relative;
+            }
+            /* .line::before {
+                content: "";
+                display: block;
+                position: absolute;
+                background-color: transparent;
+                height: 100px;
+                width: 100px;
+                top: -1cm;
+                left: -2cm;
+            } */
+            .links {
+                display: flex;
+                gap: 20px;
+                overflow: hidden;
+            }
+            .links i {
+                transition: all 0.5s linear;
+            }
+            .links i:nth-child(even) {
+                transform: translateY(-1.5cm);
+            }
+            .links i:nth-child(odd) {
+                transform: translateY(1.5cm);
+            }
+            .nav:hover i {
+                transform: translateY(0cm);
+            }
+            .nav:hover .line {
+                width: 64px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="nav">
+            <p>Social</p>
+            <div class="line"></div>
+            <div class="links">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-linkedin"></i>
+                <i class="fa-brands fa-pinterest"></i>
+                <i class="fa-brands fa-wordpress"></i>
+            </div>
+        </div>
+    </body>
+</html>
