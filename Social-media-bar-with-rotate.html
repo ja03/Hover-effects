@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+            integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer" />
+        <title>Document</title>
+        <style>
+            body {
+                font-size: 24px;
+                font-family: Arial, Helvetica, sans-serif;
+                background-image: url("img.jpg");
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+                height: 100vh;
+                color: #fff;
+                display: grid;
+                place-items: center;
+            }
+            .nav {
+                margin: 148px;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
+            .line {
+                height: 0.5px;
+                width: 15px;
+                border-radius: 16px;
+                background-color: #fff;
+                transition: all 0.5s ease;
+            }
+            .links {
+                display: flex;
+                gap: 20px;
+                overflow: hidden;
+            }
+            .links a {
+                color: #fff;
+                transition: all 0.5s linear;
+                opacity: 0;
+                display: inline-block;
+                /* width: 20px; */
+                /* height: px; */
+                transform-origin: center center;
+            }
+            .links a:nth-child(even) {
+                transform: translateY(-1cm);
+            }
+            .links a:nth-child(odd) {
+                transform: translateY(1cm);
+            }
+            .nav:hover a {
+                transform: translateY(0cm);
+                opacity: 1;
+            }
+            .links a:hover {
+                animation: rotate-a 0.5s linear 0.25s 1 forwards;
+            }
+            @keyframes rotate-a {
+                /* what I did here is start at the finishe and go back to the normall rotate because the 0deg --> 180deg 
+                    3D rotate is not working in the way I want it to work */
+                0% {
+                    transform: rotate3d(1, 1, 0, 180deg);
+                }
+                100% {
+                    transform: rotate3d(0deg);
+                }
+            }
+            .nav:hover .line {
+                width: 64px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="nav">
+            <p>Social</p>
+            <div class="line"></div>
+            <div class="links">
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#"><i class="fa-brands fa-pinterest"></i></a>
+                <a href="#"><i class="fa-brands fa-wordpress"></i></a>
+            </div>
+        </div>
+    </body>
+</html>
