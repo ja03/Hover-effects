@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Card Hover</title>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css"
+            type="text/css" />
+        <style>
+            body {
+                margin: 48px;
+                background: -webkit-linear-gradient(
+                    45deg,
+                    hsla(265, 53%, 29%, 1) 0%,
+                    hsla(24, 93%, 73%, 1) 100%
+                );
+
+                filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#432371", endColorstr="#FAAE7B", GradientType=1 );
+                background-repeat: no-repeat;
+                background-position: center;
+                height: 97.8vh;
+            }
+            .card {
+                font-family: "Trebuchet MS", "Lucida Sans Unicode",
+                    "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+                width: 300px;
+                height: 300px;
+                background: #ccc;
+                padding: 8px;
+                overflow: hidden;
+                border-radius: 16px;
+                color: #fff;
+                transition-duration: 0.25s;
+                position: relative;
+                margin: 12px;
+            }
+            .button {
+                position: absolute;
+                bottom: 4px;
+                right: 4px;
+                background-color: #aaa;
+                height: 40px;
+                width: 40px;
+                margin: 0 auto;
+                border-radius: 50%;
+                display: grid;
+                place-items: center;
+            }
+            .circle {
+                width: 8px;
+                height: 8px;
+                border-radius: 50%;
+                background-color: #eee;
+            }
+            h1 {
+                transition: all ease-in 1.5s;
+                color: #fff;
+                font-size: 64px;
+                margin: 16px 0;
+                padding: 0;
+                transform: translateX(4cm);
+                scale: 1.6;
+                -webkit-text-stroke: 3px;
+                letter-spacing: 1px;
+            }
+            div.insta:hover {
+                background: linear-gradient(
+                    90deg,
+                    hsla(197, 100%, 63%, 1) 0%,
+                    hsla(294, 100%, 55%, 1) 100%
+                );
+            }
+            div.facebook:hover {
+                background: linear-gradient(135deg, #30ace6, #0a4e92);
+            }
+            div.youtube:hover {
+                background: linear-gradient(135deg, #ff0000, #ff5e5e);
+            }
+            div.twitter:hover {
+                background: linear-gradient(135deg, #73a1bd, #08b2e2);
+            }
+            .card:hover h1 {
+                transform: translateX(-1.3cm);
+            }
+            .card:hover .button {
+                background-color: rgba(0, 0, 0, 0.3);
+            }
+            .card:hover .circle {
+                background-color: #fff;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="card insta">
+                        <h1>Instagram</h1>
+                        <h4
+                            style="
+                                font-size: 36px;
+                                margin: 24px 0 0 0;
+                                padding: 0;
+                            ">
+                            Instagram
+                        </h4>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Iste ipsam suscipit ut sint quod. Expedita,
+                            voluptate? Laboriosam similique quae saepe corrupti?
+                            .
+                        </p>
+                        <div class="button">
+                            <div class="circle"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card facebook">
+                        <h1>Facebook</h1>
+                        <h4
+                            style="
+                                font-size: 36px;
+                                margin: 24px 0 0 0;
+                                padding: 0;
+                            ">
+                            Facecbook
+                        </h4>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Iste ipsam suscipit ut sint quod. Expedita,
+                            voluptate? Laboriosam similique quae saepe corrupti?
+                            .
+                        </p>
+                        <div class="button">
+                            <div class="circle"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="card youtube">
+                        <h1>Youtube</h1>
+                        <h4
+                            style="
+                                font-size: 36px;
+                                margin: 24px 0 0 0;
+                                padding: 0;
+                            ">
+                            Youtube
+                        </h4>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Iste ipsam suscipit ut sint quod. Expedita,
+                            voluptate? Laboriosam similique quae saepe corrupti?
+                            .
+                        </p>
+                        <div class="button">
+                            <div class="circle"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card twitter">
+                        <h1>Twitter</h1>
+                        <h4
+                            style="
+                                font-size: 36px;
+                                margin: 24px 0 0 0;
+                                padding: 0;
+                            ">
+                            Twitter
+                        </h4>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Iste ipsam suscipit ut sint quod. Expedita,
+                            voluptate? Laboriosam similique quae saepe corrupti?
+                            .
+                        </p>
+                        <div class="button">
+                            <div class="circle"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
